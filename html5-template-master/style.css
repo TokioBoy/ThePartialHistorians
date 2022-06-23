@@ -9,6 +9,8 @@
 :root {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  --time: all 0.3s ease-out;
+  /* Создание общего правила */
 }
 
 @media (max-width: 600px) {
@@ -57,7 +59,8 @@ header {
   background-color: #fff;
   position: absolute;
   border-radius: 9px;
-  transition: all 0.3s ease-out;
+  transition: var(--time);
+
 }
 
 #ham>span:nth-child(1) {
@@ -95,7 +98,7 @@ nav {
   background-color: rgba(0,0,0,0.7);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3 ease-out;
+  transition: var(--time);
 }
 
 .visible {
@@ -112,7 +115,8 @@ h1 {
   background-image: url(media/media/wreath-128.png);
   background-repeat: no-repeat;
   background-position: center top;
-  padding: top;
+  padding-top: 160px;
+  margin-bottom: 6rem;
 }
 
 h1>span:first-child {
@@ -143,4 +147,23 @@ h1>span:last-child {
   transform: scale (0.4);
   }
 }
+    #btn {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 1.3px;
+      border: 1px solid #fff;
+      padding: 28px 42px;
+      background-color: rgba(0,0,0,0.3);
+      transition: var(--time);
+      /* обращение к общему правилу */
+    }
+
+    #btn:hover {
+      transform: scale(1.1);
+    }
+
 }
