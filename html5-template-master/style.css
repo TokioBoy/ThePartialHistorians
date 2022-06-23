@@ -33,14 +33,49 @@ header {
   position: sticky;
   top:0;
   left:0;
-  background-image: url(media/media/rome.jpg);
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
+  header::before {
+    /* before создает что-то перед тем как запустить указанный контейнер */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(media/media/rome.jpg);
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    animation-name: party;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes party {
+    0% {
+      transform-origin: 50%;
+      transform: scale3d(1,1,1);
+    }
+    50% {
+      transform-origin: 10%;
+      transform: scale3d(1.1, 1.1, 1);
+    }
+    75% {
+      transform-origin: 90%;
+      transform: scale3d(1.2 ,1.2 ,1);
+    }
+    100% {
+      transform-origin: 20%;
+      transform: scale3d(1.3 ,1.3 ,1);
+    }
+    
+  }
 
 #ham {
   width: 60px;
@@ -193,6 +228,8 @@ h1>span:last-child {
       background-color: rgba(0,0,0,0.3);
       transition: var(--time);
       /* обращение к общему правилу */
+      z-index: 5;
+      /* Эта херня прыгает через указанное количество слоев(в данном сайте прыгнула из под header) */
     }
 
     #btn:hover {
