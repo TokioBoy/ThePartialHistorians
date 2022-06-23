@@ -107,11 +107,26 @@ nav {
 
   nav>ul {
     text-align: center;
+    list-style-type: none;
+    /* Убирает блядские точки из списка */
+    background-image: url(media/media/wreath-32.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 4rem;
   }
 
   nav a {
     /* nav>ul>list>a - это путь здесь */
     color: aquamarine;
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    transition: var(--time);
+  }
+
+  nav a:hover {
+    transform: scale(1.2);
   }
 .visible {
   opacity: 1;
