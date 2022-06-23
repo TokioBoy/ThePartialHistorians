@@ -99,11 +99,28 @@ nav {
   opacity: 0;
   visibility: hidden;
   transition: var(--time);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+  nav>ul {
+    text-align: center;
+  }
+
+  nav a {
+    /* nav>ul>list>a - это путь здесь */
+    color: aquamarine;
+  }
 .visible {
   opacity: 1;
   visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 h1 {
@@ -135,16 +152,17 @@ h1>span:last-child {
 
 @media (max-width: 1400px) {
   h1{
-  transform: scale (0.8);
+  transform: scale(0.8);
   }
+}
 @media (max-width: 600px) {
     h1{
-    transform: scale (0.6);
+    transform: scale(0.6);
     }
   }
 @media (max-width: 320px) {
   h1{
-  transform: scale (0.4);
+  transform: scale(0.4);
   }
 }
     #btn {
@@ -166,4 +184,3 @@ h1>span:last-child {
       transform: scale(1.1);
     }
 
-}
