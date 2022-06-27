@@ -10,6 +10,22 @@ document.querySelector('#ham').addEventListener('click', () => {
 
 }); 
     
+    const options = {
+        rootMargin:'1000px 0px 0px 0px',
+        treshhold: 0.5
+        // Тригериться когда обьект входит в экран на указанную часть от 1 , где 1 - весь экран
+        
+    };
+
+    const observe = entries => entries.forEach(entry => {
+        entry.target.classList.toggle('inviewport', entry.isIntersecting);
+    });
+
+    const obs = new IntersectionObserver(observe, options);
+    document.querySelectorAll('#grid>div').forEach(el => obs.observe(el)
     
+);
+
+
 
 })();
