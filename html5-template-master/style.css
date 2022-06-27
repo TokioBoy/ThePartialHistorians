@@ -280,6 +280,14 @@ h1>span:last-child {
       transition: transform 0.5s, opacity 1.5s;
     }
 
+    #grid>div:nth-child(odd) {
+      transition: transform 0.5s, opacity 1.5s;
+    }
+
+    #grid>div:nth-child(even) {
+      transition: transform 1s, opacity 2.5s;
+    }
+
     #grid>div.inviewport {
       transform: translate(0 , 0);
       opacity: 1;
@@ -427,4 +435,16 @@ h1>span:last-child {
   .nobr {
     white-space: nowrap;
     /* утилита */
+  }
+ 
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    background-image: url(media/media/wreath-32.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 4rem;
   }
