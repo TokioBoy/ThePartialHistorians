@@ -462,7 +462,7 @@ h1>span:last-child {
     padding-top: 4rem;
   }
 
-  #latest>p , #subscribe>p{
+  #latest>p , #subscribe>p , #mailinglist>p{
     margin-bottom: 3rem;
   }
 
@@ -503,3 +503,59 @@ h1>span:last-child {
     }
   }
 
+
+  form {
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  [type = "email"] {
+    /* Выделяет все email */
+    font-size: inherit;
+    font-family: inherit;
+    display: block;
+    padding: 0 1rem;
+    background-color: #111;
+    color: inherit;
+    border: 1px solid aquamarine;
+    outline: none;
+    flex-grow: 1;
+    /* заполняет всю ячейку */
+    margin-right: 1;
+  }
+
+  ::placeholder {
+    color: #444;
+  }
+
+button {
+  font-size: 0.8rem;
+    font-family: inherit;
+    display: block;
+    outline: none;
+    padding: 20px 30px;
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid aquamarine;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+
+button:hover {
+  background-color: #31633875;
+}
+
+@media (max-width: 900px){
+  form{
+    flex-direction: column;
+  }
+
+  [type = "email"] {
+    padding: 1rem;
+    margin-right: 0;
+    margin-bottom: -1px;
+  }
+}
